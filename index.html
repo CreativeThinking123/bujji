@@ -67,6 +67,10 @@ canvas{
 <body>
 
 <canvas id="c"></canvas>
+  <audio id="bgMusic" preload="auto" loop>
+  <source src="https://raw.githubusercontent.com/CreativeThinking123/satish/main/Nuvvunte%20Chaley%20Video%20Song%20Out%20Now%20%20ATK%20%20Ram%20Pothineni%20%20Upendra%20%20Bhagyashri%20Borse%20%20MaheshBabu%20P%20-%20Mythri%20Movie%20Makers.mp3" type="audio/mpeg">
+</audio>
+
 
 <!-- SCENE 1 -->
 <div id="scene1" class="scene active">
@@ -107,7 +111,11 @@ canvas{
 <script>
 
 /* SCENE AUTO START */
-setTimeout(()=>switchScene("scene2"),2000);
+setTimeout(()=>{
+  switchScene("scene2");
+  document.getElementById("bgMusic").play();
+},2000);
+
 
 /* SCENE SWITCH */
 function switchScene(id){
